@@ -1,5 +1,5 @@
 {% set name = "multipart" %}
-{% set version = "0.2.5" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/multipart-{{ version }}.tar.gz
-  sha256: fa98838d40c967bb19589626a0fb8a5c40c421dda2febe1b0351fcf626e24651
+  sha256: 6ac937fe07cd4e11cf4ca199f3d8f668e6a37e0f477c5ee032673d45be7f7957
 
 build:
   noarch: python
@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - flit-core
   run:
     - python >=3.7
 
