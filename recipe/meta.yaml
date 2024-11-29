@@ -1,13 +1,13 @@
 {% set name = "multipart" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/multipart-{{ version }}.tar.gz
-  sha256: ee32683f5c454740cd9139e1d6057053823da0729c426f156464f81111529ba1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/multipart-{{ version }}.tar.gz
+  sha256: 829b909b67bc1ad1c6d4488fcdc6391c2847842b08323addf5200db88dbe9480
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - flit-core
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -28,6 +28,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
