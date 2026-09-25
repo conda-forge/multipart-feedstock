@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  version: "2.0.1"
+
+package:
+  name: multipart
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/m/multipart/multipart-${{ version }}.tar.gz
+  sha256: 5dfea7ce4260e10a9e620369449e7d41c269a94e192db9ea4af1a0059cddd370
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - flit-core >=3.9,<4
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - multipart
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Parser for multipart/form-data
+  license: MIT
+  license_file: LICENSE
+  homepage: https://multipart.readthedocs.io/
+  repository: https://github.com/defnull/multipart
+  documentation: https://multipart.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - ocefpaf

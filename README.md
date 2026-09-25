@@ -3,11 +3,15 @@ About multipart-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/multipart-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/defnull/multipart
+Home: https://multipart.readthedocs.io/
 
 Package license: MIT
 
-Summary: Parser for multipart/form-data.
+Summary: Parser for multipart/form-data
+
+Development: https://github.com/defnull/multipart
+
+Documentation: https://multipart.readthedocs.io/
 
 Current build status
 ====================
@@ -40,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `multipart` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install multipart
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install multipart
 ```
 
-It is possible to list all of the versions of `multipart` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add multipart
+# for installing globally
+pixi global install multipart
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `multipart` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search multipart --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search multipart --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search multipart --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +122,8 @@ mamba repoquery whoneeds multipart --channel conda-forge
 # List dependencies of `multipart`:
 mamba repoquery depends multipart --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
