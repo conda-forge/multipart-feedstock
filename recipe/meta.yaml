@@ -1,13 +1,13 @@
 {% set name = "multipart" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/multipart-{{ version }}.tar.gz
-  sha256: d6076567b489270271d9ec103d404745da1501ad5b70e3a7f1f07f5623d82850
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/multipart-{{ version }}.tar.gz
+  sha256: 5dfea7ce4260e10a9e620369449e7d41c269a94e192db9ea4af1a0059cddd370
 
 build:
   noarch: python
