@@ -3,11 +3,15 @@ About multipart-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/multipart-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/defnull/multipart
+Home: https://multipart.readthedocs.io/
 
 Package license: MIT
 
-Summary: Parser for multipart/form-data.
+Summary: Parser for multipart/form-data
+
+Development: https://github.com/defnull/multipart
+
+Documentation: https://multipart.readthedocs.io/
 
 Current build status
 ====================
